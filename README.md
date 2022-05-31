@@ -2,10 +2,6 @@
 Handwritten Character Recognition using Deep Learning
 ### DATASET
 - [IAM Dataset](https://fki.tic.heia-fr.ch/databases/download-the-iam-handwriting-database)
-### Here 2 files are submitted: 
-- One is Fake News Detection by [NLP](https://github.com/Puranshu/FND_project/blob/main/FND_NLP_code.ipynb) techniques where we use StopWords, Tokenisation, Lemmatization etc. ([Course Project](https://drive.google.com/drive/folders/1ZBO2sUA6tarcFLq58T95YHoVmMZrnnUm?usp=sharing) with Akshit).
-
-- In other one we used [Long-Short-Term-Memory](https://github.com/Puranshu/FND_project/blob/main/FND_LSTM_code.ipynb) (Neural Network) to achieve same agenda.
 
 ## Roadmap
 ### Natural Language Processing
