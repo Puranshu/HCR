@@ -10,36 +10,20 @@ Handwritten Character Recognition using Deep Learning
 - String lookup layer is also used as we know we cannot feed character to our model, we are required to convert these characters to numbers. Vice versa is also required because the outcome will also be a number and to understand that we need to convert this numeric output to character.
 - As an initial preprocessing task we convert all images to the same size such that their content is intact and aspect ratio is also not disturbed. This resizing of image without any significant distortion is carried out by padding on image. First we calculate the total required padding and do that on both ends of the image. This is different from simply resizing the image.
 - After putting everything together we have an image size of 128x32 and a batch size of 64. In the processing part we read the file and decode it unit8 tensor. After that we vectorize the labels character to numeric with input encoding as UTF-8. Next we prepare the final dataset with image paths and corresponding cleaned labels send these paths and their labels to the model. As for the last layer, we use CTC loss.
-- Model and its parameters:After the input layer we have 2 convolutional and 2 maxpool layers each having pool size and stride of 2. With that, the overall size is decreased by a factor of 4. Following we reshape the image and add a dense layer with 64 nodes and ReLu activation function (where negative input is converted to 0 and positive input remains as it is) and dropout of 0.2.
+- Model and its parameters: After the input layer we have 2 convolutional and 2 maxpool layers each having pool size and stride of 2. With that, the overall size is decreased by a factor of 4. Following we reshape the image and add a dense layer with 64 nodes and ReLu activation function (where negative input is converted to 0 and positive input remains as it is) and dropout of 0.2.
 Subsequently we add 2 bidirectional LSTM each with a dropout of 0.25. As for the end layer we have CTC loss which will calculate loss after each step/epoch. This whole model uses Adam optimizer, we can also use different optimizers (like mini batch gradient descent, RMSProp ) and check the results. We used ADAM because of its fast convergence and it can solve the problem of vanishing learning rate. As for evaluation purposes we use Edit distance.
 After setting the layers and their parameters, the model is then trained on different epochs and with each epoch we calculate the mean edit distance. Loss for training and validation data is also computed.
 
 
 ## Documentation
 
-- [Regular Expression (RegEx)](https://docs.python.org/3/library/re.html)
+- [LSTM layer](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Bidirectional)
 
-- [Tokenization](https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html)
+- [CTCLoss](https://pytorch.org/docs/stable/generated/torch.nn.CTCLoss.html)
 
-- [StopWords](https://www.geeksforgeeks.org/removing-stop-words-nltk-python/)
+- [Edit Distance](https://edit-distance.readthedocs.io/en/latest/)
 
-- [Lemmatization](https://pythonprogramming.net/lemmatizing-nltk-tutorial/)
-
-- [Bag of words/Count vectorizer](https://www.mygreatlearning.com/blog/bag-of-words/)
-
-- [TF-iDF Vectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
-
-- [Logistic regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
-
-- [Stemming](https://www.nltk.org/howto/stem.html)
-
-- [One Hot Encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
-
-- [Padding](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/sequence/pad_sequences)
-
-- [Sequential model](https://keras.io/guides/sequential_model/)
-
-- [Confusion Matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
+- [ADAM optimizer](https://keras.io/api/optimizers/adam/)
 
 
 ## Feedback
