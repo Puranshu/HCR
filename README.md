@@ -1,7 +1,7 @@
 # HCR
 Handwritten Character Recognition using Deep Learning
 ### DATASET
-- [Link](https://fki.tic.heia-fr.ch/databases/download-the-iam-handwriting-database)#
+- [IAM Dataset](https://fki.tic.heia-fr.ch/databases/download-the-iam-handwriting-database)
 ### Here 2 files are submitted: 
 - One is Fake News Detection by [NLP](https://github.com/Puranshu/FND_project/blob/main/FND_NLP_code.ipynb) techniques where we use StopWords, Tokenisation, Lemmatization etc. ([Course Project](https://drive.google.com/drive/folders/1ZBO2sUA6tarcFLq58T95YHoVmMZrnnUm?usp=sharing) with Akshit).
 
@@ -58,10 +58,6 @@ Handwritten Character Recognition using Deep Learning
 
 - [Confusion Matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
 
-## Acknowledgements
-
- - [Utsav Aggarwal](https://www.youtube.com/watch?v=xyq-zYr1cnI&t=2117s)
- - [Krish Naik](https://www.youtube.com/watch?v=MXPh_lMRwAI&t=1103s)
 
 ## Feedback
 
