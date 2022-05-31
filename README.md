@@ -17,7 +17,7 @@ After setting the layers and their parameters, the model is then trained on diff
 
 ## Documentation
 
-- [LSTM layer](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Bidirectional)
+- [Bi-LSTM layer](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Bidirectional)
 
 - [CTCLoss](https://pytorch.org/docs/stable/generated/torch.nn.CTCLoss.html)
 
