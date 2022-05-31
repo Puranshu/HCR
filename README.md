@@ -14,6 +14,8 @@ Handwritten Character Recognition using Deep Learning
 Subsequently we add 2 bidirectional LSTM each with a dropout of 0.25. As for the end layer we have CTC loss which will calculate loss after each step/epoch. This whole model uses Adam optimizer, we can also use different optimizers (like mini batch gradient descent, RMSProp ) and check the results. We used ADAM because of its fast convergence and it can solve the problem of vanishing learning rate. As for evaluation purposes we use Edit distance.
 After setting the layers and their parameters, the model is then trained on different epochs and with each epoch we calculate the mean edit distance. Loss for training and validation data is also computed.
 
+## Conclusion
+- We discussed a RNN based deep learning model for Words recognition from the IAM dataset. To carry out this, we used bidirectional LSTM. With a resized image of 128x32, and labelled as well we try to train our model on different epochs and as epochs are increased we can see significant changes in the performance. Here we witnessed that as we increase epochs from 10 to 50, we can see slight reduction in MED (17.8 to 17.35), however loss on training and validation are reduced significantly from 3.6 to 1.67 and 2.9 to 1.77 respectively. This process can further be optimised by use of more nodes in layers and by use of different activation functions. It is generally observed that if we use more nodes in layers, we get better results. However, while doing so we should also avoid overfitting.
 
 ## Documentation
 
